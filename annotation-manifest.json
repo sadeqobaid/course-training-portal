@@ -1,0 +1,629 @@
+{
+  "repository": "/home/ubuntu/course-training-portal-public",
+  "output": "/home/ubuntu/course-training-portal-annotated",
+  "model": "gpt-5-mini",
+  "comment_only_intent": true,
+  "targets": 103,
+  "completed": 103,
+  "failures": [],
+  "files": [
+    {
+      "source": ".env.example",
+      "output": "/home/ubuntu/course-training-portal-annotated/.env.example",
+      "original_lines": 14,
+      "annotated_lines": 41
+    },
+    {
+      "source": "backend/database/001_schema.sql",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/database/001_schema.sql",
+      "original_lines": 147,
+      "annotated_lines": 271
+    },
+    {
+      "source": "backend/package.json",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/package.json.annotations.md",
+      "original_lines": 52,
+      "annotated_lines": 135
+    },
+    {
+      "source": "backend/scripts/migrate.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/scripts/migrate.ts",
+      "original_lines": 27,
+      "annotated_lines": 60
+    },
+    {
+      "source": "backend/scripts/seed.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/scripts/seed.ts",
+      "original_lines": 34,
+      "annotated_lines": 70
+    },
+    {
+      "source": "backend/src/app.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/app.module.ts",
+      "original_lines": 43,
+      "annotated_lines": 94
+    },
+    {
+      "source": "backend/src/assessments/assessments.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/assessments/assessments.controller.ts",
+      "original_lines": 56,
+      "annotated_lines": 111
+    },
+    {
+      "source": "backend/src/assessments/assessments.dto.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/assessments/assessments.dto.ts",
+      "original_lines": 28,
+      "annotated_lines": 59
+    },
+    {
+      "source": "backend/src/assessments/assessments.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/assessments/assessments.module.ts",
+      "original_lines": 13,
+      "annotated_lines": 37
+    },
+    {
+      "source": "backend/src/assessments/assessments.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/assessments/assessments.service.ts",
+      "original_lines": 210,
+      "annotated_lines": 313
+    },
+    {
+      "source": "backend/src/auth/auth.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/auth/auth.controller.ts",
+      "original_lines": 27,
+      "annotated_lines": 59
+    },
+    {
+      "source": "backend/src/auth/auth.dto.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/auth/auth.dto.ts",
+      "original_lines": 23,
+      "annotated_lines": 54
+    },
+    {
+      "source": "backend/src/auth/auth.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/auth/auth.module.ts",
+      "original_lines": 21,
+      "annotated_lines": 51
+    },
+    {
+      "source": "backend/src/auth/auth.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/auth/auth.service.ts",
+      "original_lines": 88,
+      "annotated_lines": 133
+    },
+    {
+      "source": "backend/src/auth/jwt-auth.guard.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/auth/jwt-auth.guard.ts",
+      "original_lines": 56,
+      "annotated_lines": 87
+    },
+    {
+      "source": "backend/src/automation/worker.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/automation/worker.ts",
+      "original_lines": 127,
+      "annotated_lines": 188
+    },
+    {
+      "source": "backend/src/certificates/certificates.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/certificates/certificates.controller.ts",
+      "original_lines": 30,
+      "annotated_lines": 64
+    },
+    {
+      "source": "backend/src/certificates/certificates.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/certificates/certificates.module.ts",
+      "original_lines": 12,
+      "annotated_lines": 36
+    },
+    {
+      "source": "backend/src/certificates/certificates.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/certificates/certificates.service.ts",
+      "original_lines": 87,
+      "annotated_lines": 156
+    },
+    {
+      "source": "backend/src/common/current-user.decorator.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/common/current-user.decorator.ts",
+      "original_lines": 9,
+      "annotated_lines": 29
+    },
+    {
+      "source": "backend/src/common/http-exception.filter.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/common/http-exception.filter.ts",
+      "original_lines": 33,
+      "annotated_lines": 73
+    },
+    {
+      "source": "backend/src/common/request-id.middleware.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/common/request-id.middleware.ts",
+      "original_lines": 16,
+      "annotated_lines": 41
+    },
+    {
+      "source": "backend/src/common/roles.decorator.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/common/roles.decorator.ts",
+      "original_lines": 5,
+      "annotated_lines": 28
+    },
+    {
+      "source": "backend/src/common/roles.guard.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/common/roles.guard.ts",
+      "original_lines": 28,
+      "annotated_lines": 65
+    },
+    {
+      "source": "backend/src/common/types.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/common/types.ts",
+      "original_lines": 17,
+      "annotated_lines": 42
+    },
+    {
+      "source": "backend/src/config/env.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/config/env.ts",
+      "original_lines": 54,
+      "annotated_lines": 108
+    },
+    {
+      "source": "backend/src/config/load-env.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/config/load-env.ts",
+      "original_lines": 15,
+      "annotated_lines": 38
+    },
+    {
+      "source": "backend/src/courses/courses.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/courses/courses.controller.ts",
+      "original_lines": 48,
+      "annotated_lines": 91
+    },
+    {
+      "source": "backend/src/courses/courses.dto.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/courses/courses.dto.ts",
+      "original_lines": 24,
+      "annotated_lines": 50
+    },
+    {
+      "source": "backend/src/courses/courses.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/courses/courses.module.ts",
+      "original_lines": 10,
+      "annotated_lines": 38
+    },
+    {
+      "source": "backend/src/courses/courses.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/courses/courses.service.ts",
+      "original_lines": 170,
+      "annotated_lines": 232
+    },
+    {
+      "source": "backend/src/database/database.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/database/database.module.ts",
+      "original_lines": 6,
+      "annotated_lines": 24
+    },
+    {
+      "source": "backend/src/database/database.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/database/database.service.ts",
+      "original_lines": 47,
+      "annotated_lines": 88
+    },
+    {
+      "source": "backend/src/enrollments/enrollments.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/enrollments/enrollments.controller.ts",
+      "original_lines": 46,
+      "annotated_lines": 90
+    },
+    {
+      "source": "backend/src/enrollments/enrollments.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/enrollments/enrollments.module.ts",
+      "original_lines": 13,
+      "annotated_lines": 37
+    },
+    {
+      "source": "backend/src/enrollments/enrollments.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/enrollments/enrollments.service.ts",
+      "original_lines": 98,
+      "annotated_lines": 138
+    },
+    {
+      "source": "backend/src/health/health.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/health/health.controller.ts",
+      "original_lines": 13,
+      "annotated_lines": 37
+    },
+    {
+      "source": "backend/src/health/health.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/health/health.module.ts",
+      "original_lines": 5,
+      "annotated_lines": 22
+    },
+    {
+      "source": "backend/src/main.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/main.ts",
+      "original_lines": 30,
+      "annotated_lines": 68
+    },
+    {
+      "source": "backend/src/management/management.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/management/management.controller.ts",
+      "original_lines": 26,
+      "annotated_lines": 59
+    },
+    {
+      "source": "backend/src/management/management.dto.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/management/management.dto.ts",
+      "original_lines": 9,
+      "annotated_lines": 29
+    },
+    {
+      "source": "backend/src/management/management.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/management/management.module.ts",
+      "original_lines": 11,
+      "annotated_lines": 33
+    },
+    {
+      "source": "backend/src/management/management.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/management/management.service.ts",
+      "original_lines": 62,
+      "annotated_lines": 112
+    },
+    {
+      "source": "backend/src/notifications/notifications.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/notifications/notifications.controller.ts",
+      "original_lines": 22,
+      "annotated_lines": 54
+    },
+    {
+      "source": "backend/src/notifications/notifications.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/notifications/notifications.module.ts",
+      "original_lines": 10,
+      "annotated_lines": 32
+    },
+    {
+      "source": "backend/src/notifications/notifications.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/notifications/notifications.service.ts",
+      "original_lines": 126,
+      "annotated_lines": 212
+    },
+    {
+      "source": "backend/src/progress/progress.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/progress/progress.service.ts",
+      "original_lines": 77,
+      "annotated_lines": 119
+    },
+    {
+      "source": "backend/src/reports/reports.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/reports/reports.controller.ts",
+      "original_lines": 19,
+      "annotated_lines": 46
+    },
+    {
+      "source": "backend/src/reports/reports.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/reports/reports.module.ts",
+      "original_lines": 5,
+      "annotated_lines": 26
+    },
+    {
+      "source": "backend/src/users/users.controller.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/users/users.controller.ts",
+      "original_lines": 34,
+      "annotated_lines": 70
+    },
+    {
+      "source": "backend/src/users/users.dto.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/users/users.dto.ts",
+      "original_lines": 22,
+      "annotated_lines": 45
+    },
+    {
+      "source": "backend/src/users/users.module.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/users/users.module.ts",
+      "original_lines": 11,
+      "annotated_lines": 33
+    },
+    {
+      "source": "backend/src/users/users.service.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/src/users/users.service.ts",
+      "original_lines": 85,
+      "annotated_lines": 130
+    },
+    {
+      "source": "backend/tests/api/assessments.controller.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/api/assessments.controller.test.ts",
+      "original_lines": 26,
+      "annotated_lines": 58
+    },
+    {
+      "source": "backend/tests/api/auth.controller.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/api/auth.controller.test.ts",
+      "original_lines": 40,
+      "annotated_lines": 68
+    },
+    {
+      "source": "backend/tests/api/courses.controller.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/api/courses.controller.test.ts",
+      "original_lines": 42,
+      "annotated_lines": 84
+    },
+    {
+      "source": "backend/tests/api/live-http-contract.mjs",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/api/live-http-contract.mjs",
+      "original_lines": 98,
+      "annotated_lines": 138
+    },
+    {
+      "source": "backend/tests/api/management.controller.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/api/management.controller.test.ts",
+      "original_lines": 25,
+      "annotated_lines": 56
+    },
+    {
+      "source": "backend/tests/api/users.controller.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/api/users.controller.test.ts",
+      "original_lines": 25,
+      "annotated_lines": 56
+    },
+    {
+      "source": "backend/tests/e2e/live-runbook.mjs",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/e2e/live-runbook.mjs",
+      "original_lines": 133,
+      "annotated_lines": 211
+    },
+    {
+      "source": "backend/tests/e2e/portal-flow.e2e.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/e2e/portal-flow.e2e.ts",
+      "original_lines": 8,
+      "annotated_lines": 33
+    },
+    {
+      "source": "backend/tests/integration/schema-contract.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/integration/schema-contract.test.ts",
+      "original_lines": 8,
+      "annotated_lines": 28
+    },
+    {
+      "source": "backend/tests/unit/notifications.service.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/unit/notifications.service.test.ts",
+      "original_lines": 36,
+      "annotated_lines": 72
+    },
+    {
+      "source": "backend/tests/unit/progress.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/unit/progress.test.ts",
+      "original_lines": 19,
+      "annotated_lines": 47
+    },
+    {
+      "source": "backend/tests/unit/scoring.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tests/unit/scoring.test.ts",
+      "original_lines": 47,
+      "annotated_lines": 88
+    },
+    {
+      "source": "backend/tsconfig.json",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/tsconfig.json.annotations.md",
+      "original_lines": 20,
+      "annotated_lines": 59
+    },
+    {
+      "source": "backend/vitest.config.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/vitest.config.ts",
+      "original_lines": 13,
+      "annotated_lines": 35
+    },
+    {
+      "source": "backend/vitest.e2e.config.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/backend/vitest.e2e.config.ts",
+      "original_lines": 9,
+      "annotated_lines": 30
+    },
+    {
+      "source": "frontend/.env.example",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/.env.example",
+      "original_lines": 1,
+      "annotated_lines": 17
+    },
+    {
+      "source": "frontend/index.html",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/index.html",
+      "original_lines": 12,
+      "annotated_lines": 35
+    },
+    {
+      "source": "frontend/package.json",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/package.json.annotations.md",
+      "original_lines": 29,
+      "annotated_lines": 80
+    },
+    {
+      "source": "frontend/src/App.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/App.tsx",
+      "original_lines": 82,
+      "annotated_lines": 131
+    },
+    {
+      "source": "frontend/src/api/client.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/api/client.test.ts",
+      "original_lines": 7,
+      "annotated_lines": 27
+    },
+    {
+      "source": "frontend/src/api/client.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/api/client.ts",
+      "original_lines": 38,
+      "annotated_lines": 79
+    },
+    {
+      "source": "frontend/src/auth/AuthContext.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/auth/AuthContext.tsx",
+      "original_lines": 61,
+      "annotated_lines": 109
+    },
+    {
+      "source": "frontend/src/components/CourseCard.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/components/CourseCard.tsx",
+      "original_lines": 12,
+      "annotated_lines": 37
+    },
+    {
+      "source": "frontend/src/components/NavBar.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/components/NavBar.tsx",
+      "original_lines": 45,
+      "annotated_lines": 85
+    },
+    {
+      "source": "frontend/src/components/ProtectedRoute.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/components/ProtectedRoute.tsx",
+      "original_lines": 25,
+      "annotated_lines": 60
+    },
+    {
+      "source": "frontend/src/main.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/main.tsx",
+      "original_lines": 16,
+      "annotated_lines": 43
+    },
+    {
+      "source": "frontend/src/pages/AdminPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/AdminPage.tsx",
+      "original_lines": 262,
+      "annotated_lines": 384
+    },
+    {
+      "source": "frontend/src/pages/AssessmentPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/AssessmentPage.tsx",
+      "original_lines": 110,
+      "annotated_lines": 155
+    },
+    {
+      "source": "frontend/src/pages/CataloguePage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/CataloguePage.tsx",
+      "original_lines": 34,
+      "annotated_lines": 71
+    },
+    {
+      "source": "frontend/src/pages/CertificatesPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/CertificatesPage.tsx",
+      "original_lines": 35,
+      "annotated_lines": 74
+    },
+    {
+      "source": "frontend/src/pages/CourseDetailPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/CourseDetailPage.tsx",
+      "original_lines": 67,
+      "annotated_lines": 128
+    },
+    {
+      "source": "frontend/src/pages/LearningPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/LearningPage.tsx",
+      "original_lines": 81,
+      "annotated_lines": 139
+    },
+    {
+      "source": "frontend/src/pages/LoginPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/LoginPage.tsx",
+      "original_lines": 58,
+      "annotated_lines": 110
+    },
+    {
+      "source": "frontend/src/pages/MyCoursesPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/MyCoursesPage.tsx",
+      "original_lines": 35,
+      "annotated_lines": 74
+    },
+    {
+      "source": "frontend/src/pages/NotificationsPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/NotificationsPage.tsx",
+      "original_lines": 43,
+      "annotated_lines": 83
+    },
+    {
+      "source": "frontend/src/pages/RegisterPage.tsx",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/RegisterPage.tsx",
+      "original_lines": 51,
+      "annotated_lines": 101
+    },
+    {
+      "source": "frontend/src/pages/workspace.helpers.test.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/workspace.helpers.test.ts",
+      "original_lines": 37,
+      "annotated_lines": 75
+    },
+    {
+      "source": "frontend/src/pages/workspace.helpers.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/pages/workspace.helpers.ts",
+      "original_lines": 28,
+      "annotated_lines": 62
+    },
+    {
+      "source": "frontend/src/styles.css",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/styles.css",
+      "original_lines": 222,
+      "annotated_lines": 289
+    },
+    {
+      "source": "frontend/src/types/api.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/types/api.ts",
+      "original_lines": 82,
+      "annotated_lines": 167
+    },
+    {
+      "source": "frontend/src/vite-env.d.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/src/vite-env.d.ts",
+      "original_lines": 1,
+      "annotated_lines": 13
+    },
+    {
+      "source": "frontend/tsconfig.app.json",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/tsconfig.app.json.annotations.md",
+      "original_lines": 23,
+      "annotated_lines": 92
+    },
+    {
+      "source": "frontend/tsconfig.json",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/tsconfig.json.annotations.md",
+      "original_lines": 7,
+      "annotated_lines": 42
+    },
+    {
+      "source": "frontend/tsconfig.node.json",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/tsconfig.node.json.annotations.md",
+      "original_lines": 16,
+      "annotated_lines": 56
+    },
+    {
+      "source": "frontend/vite.config.ts",
+      "output": "/home/ubuntu/course-training-portal-annotated/frontend/vite.config.ts",
+      "original_lines": 10,
+      "annotated_lines": 30
+    },
+    {
+      "source": "infra/docker-compose.yml",
+      "output": "/home/ubuntu/course-training-portal-annotated/infra/docker-compose.yml",
+      "original_lines": 29,
+      "annotated_lines": 69
+    },
+    {
+      "source": "scripts/bootstrap.ps1",
+      "output": "/home/ubuntu/course-training-portal-annotated/scripts/bootstrap.ps1",
+      "original_lines": 30,
+      "annotated_lines": 67
+    },
+    {
+      "source": "scripts/bootstrap.sh",
+      "output": "/home/ubuntu/course-training-portal-annotated/scripts/bootstrap.sh",
+      "original_lines": 39,
+      "annotated_lines": 59
+    },
+    {
+      "source": "scripts/start-local.ps1",
+      "output": "/home/ubuntu/course-training-portal-annotated/scripts/start-local.ps1",
+      "original_lines": 20,
+      "annotated_lines": 48
+    },
+    {
+      "source": "scripts/start-local.sh",
+      "output": "/home/ubuntu/course-training-portal-annotated/scripts/start-local.sh",
+      "original_lines": 38,
+      "annotated_lines": 76
+    }
+  ]
+}

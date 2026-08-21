@@ -1,29 +1,69 @@
+# Script name: docker-compose.yml
+# Original location: infra/docker-compose.yml
+# What this script is: A Docker Compose configuration defining services and volumes
+# What it is used for: To launch application infrastructure (PostgreSQL and a local SMTP/webmail tester)
+# Programming language: YAML (Docker Compose format)
+# Inputs: Environment variables (POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST_PORT), docker-compose CLI, optional .env file
+# Outputs: Running Docker containers and persisted volume data accessible via exposed ports
+# Where output is saved or sent: Docker service (running containers) and filesystem path (Docker volume); None for database/table/browser/session storage/JSON/HTTP/API/SMTP/console unless consumed by services
+# Technologies and services used or interacted with: Docker, Docker Compose, PostgreSQL image, Mailpit (SMTP/web UI)
+# Downstream scripts/files/processes that consume the output: Application services that connect to PostgreSQL and SMTP, CI/CD or local dev tooling that depends on these containers
+# Risks and safe change note: Modifying credentials, ports, or volume paths can cause data loss, conflicts, or downtime; validate changes in staging, back up volumes, and rotate secrets safely
+# created by: Sadeq Obaid
+
+# Declare top-level services mapping to run managed containers for this compose project
 services:
+  # Define a service named "postgres" to run the PostgreSQL database container
   postgres:
+    # Specify the Docker image and version/tag to pull and run for this service
     image: postgres:18
+    # Set an explicit container name to make container identification predictable
     container_name: course-training-portal-postgres
+    # Configure the restart policy so the container is restarted unless explicitly stopped
     restart: unless-stopped
+    # Provide environment variables injected into the container at runtime (DB credentials and name)
     environment:
+      # Database superuser/name variables sourced from the environment or .env file at compose runtime
       POSTGRES_USER: ${POSTGRES_USER}
+      # Password for the configured POSTGRES_USER provided via environment
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      # Name of the initial database to create, provided via environment
       POSTGRES_DB: ${POSTGRES_DB}
+    # Map container ports to host ports to expose the DB service externally (for local dev)
     ports:
+      # Host port is optionally overridden by POSTGRES_HOST_PORT env var; default 5432 maps to container 5432
       - '${POSTGRES_HOST_PORT:-5432}:5432'
+    # Attach a named Docker volume to persist PostgreSQL data outside the container lifecycle
     volumes:
+      # Mount the named volume 'portal_postgres_data' to the container's Postgres data directory
       - portal_postgres_data:/var/lib/postgresql
+    # Define a healthcheck so orchestrators and dependents can detect when the DB is ready
     healthcheck:
+      # Use pg_isready to test DB availability with provided user and database, executed in a shell
       test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
+      # Interval between healthcheck attempts
       interval: 5s
+      # Time allowed for a single healthcheck command to complete
       timeout: 5s
+      # Number of consecutive failures before the container is considered unhealthy
       retries: 20
 
+  # Define a lightweight mail testing service using Mailpit for intercepting SMTP and providing a web UI
   mailpit:
+    # Docker image for Mailpit with a specific tag/version
     image: axllent/mailpit:v1.25
+    # Explicit container name for the Mailpit service for easy identification
     container_name: course-training-portal-mailpit
+    # Restart policy to keep the mailpit service running unless manually stopped
     restart: unless-stopped
+    # Expose SMTP and web UI ports to the host so applications can send mail and developers can view it
     ports:
+      # SMTP port mapping: host 1025 forwards to container 1025
       - '1025:1025'
+      # Web UI port mapping: host 8025 forwards to container 8025
       - '8025:8025'
 
+# Declare top-level named volumes used to persist data outside container lifecycles
 volumes:
+  # Named volume used by the postgres service to store PostgreSQL data files persistently
   portal_postgres_data:

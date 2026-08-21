@@ -1,44 +1,79 @@
+/*
+Script name: styles.css
+Original location: frontend/src/styles.css
+What this script is: Global stylesheet defining layout, component appearance, and responsive rules
+What it is used for: Styles the web application's UI including navigation, forms, cards, tables, and responsive behavior
+Programming language: CSS
+Inputs: HTML elements, classes, and structure; browser default styles and user agent stylesheet
+Outputs: CSS rules applied to the rendered HTML (visual styling)
+Where output is saved or sent: None
+Technologies and services used or interacted with: Browser rendering engine (CSS/CSSOM), HTML
+Downstream scripts/files/processes that consume the output: HTML pages and components that reference this stylesheet (frontend UI)
+Risks and safe change note: Modifying selectors, colors, spacing, or layout may impact many UI screens; test across breakpoints and components before deploying
+created by: Sadeq Obaid
+*/
+
+/* Root-level customizations: set base font, default text color, and page background. */
 :root {
+  /* Set the base font stack for the document root to ensure consistent typography. */
   font-family: Arial, sans-serif;
+  /* Define the default foreground color for text across the app. */
   color: #1c2634;
+  /* Set the overall page background color for the app. */
   background: #f3f6fa;
 }
+/* Apply border-box sizing so padding/border are included in element widths/heights. */
 * {
   box-sizing: border-box;
 }
+/* Remove default body margin to avoid unwanted whitespace around the app shell. */
 body {
   margin: 0;
 }
+/* Top navigation bar: horizontal layout, spacing, alignment, padding, and background color. */
 .nav {
+  /* Use flex layout to arrange nav items horizontally with space between. */
   display: flex;
+  /* Push items to the extremes of the bar for space-between layout. */
   justify-content: space-between;
+  /* Horizontal gap between flex children. */
   gap: 1rem;
+  /* Vertically center nav items. */
   align-items: center;
+  /* Padding along the nav; left/right use viewport width percentage for responsive spacing. */
   padding: 1rem 6vw;
+  /* Dark blue background for the nav bar. */
   background: #17365d;
+  /* White text for contrast on the dark background. */
   color: white;
 }
+/* Style links inside the nav: keep white and remove underline, add small right margin. */
 .nav a {
   color: white;
   text-decoration: none;
   margin-right: 0.9rem;
 }
+/* Brand element in nav: increase font weight for emphasis. */
 .nav .brand {
   font-weight: 700;
 }
+/* Main content container: constrain width, center horizontally, and add page padding. */
 main {
   max-width: 1050px;
   margin: 0 auto;
   padding: 2rem 1rem 4rem;
 }
+/* Utility class to narrow content width for focused areas. */
 .narrow {
   max-width: 520px;
 }
+/* Generic responsive grid: auto-fit columns with minimum size and uniform gap. */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
+/* Card component: white background, rounded corners, padding, subtle shadow, and bottom margin. */
 .card {
   background: white;
   border-radius: 0.5rem;
@@ -46,6 +81,7 @@ main {
   box-shadow: 0 1px 3px #0002;
   margin-bottom: 1rem;
 }
+/* Form container styling: grid layout to stack controls with gaps and white background. */
 form {
   display: grid;
   gap: 0.8rem;
@@ -53,16 +89,19 @@ form {
   padding: 1rem;
   border-radius: 0.5rem;
 }
+/* Label layout: use grid to stack label text and inputs with small gap. */
 label {
   display: grid;
   gap: 0.3rem;
 }
+/* Shared padding and font inheritance for inputs, textareas, and buttons. */
 input,
 textarea,
 button {
   padding: 0.6rem;
   font: inherit;
 }
+/* Primary button appearance: pointer cursor, blue background, white text, no border and slight rounding. */
 button {
   cursor: pointer;
   background: #2f5597;
@@ -70,26 +109,31 @@ button {
   border: 0;
   border-radius: 0.25rem;
 }
+/* Error text style: red color and semi-bold weight for visibility. */
 .error {
   color: #a82222;
   font-weight: 600;
 }
+/* Preformatted block: preserve wrapping, set background and padding for code/JSON display. */
 pre {
   white-space: pre-wrap;
   background: #f3f6fa;
   padding: 0.75rem;
 }
+/* Table defaults: full width, collapsed borders, white background for rows. */
 table {
   width: 100%;
   border-collapse: collapse;
   background: white;
 }
+/* Table header and cell defaults: border, padding and left text alignment. */
 th,
 td {
   border: 1px solid #ccd5e1;
   padding: 0.6rem;
   text-align: left;
 }
+/* Secondary nav container inside .nav: flex layout with wrapping and right-aligned content. */
 .nav nav {
   display: flex;
   flex-wrap: wrap;
@@ -97,11 +141,13 @@ td {
   align-items: center;
   justify-content: flex-end;
 }
+/* Sign-out button style inside nav: transparent background, bordered, and compact padding. */
 .nav .nav-signout {
   background: transparent;
   border: 1px solid #b8c8df;
   padding: 0.35rem 0.55rem;
 }
+/* Role badge visual: bordered pill with small font and no wrapping. */
 .role-badge {
   border: 1px solid #8bb7d9;
   border-radius: 999px;
@@ -109,19 +155,23 @@ td {
   padding: 0.25rem 0.5rem;
   white-space: nowrap;
 }
+/* Secondary button variant: light background, dark blue text, and subtle border. */
 button.secondary {
   background: #e9eef5;
   color: #17365d;
   border: 1px solid #b5c4d7;
 }
+/* Selected course and publish button share a green background indicating active/publish actions. */
 button.selected-course,
 button.publish-button {
   background: #176b52;
 }
+/* Disabled button state: visually indicate disabled with reduced opacity and not-allowed cursor. */
 button:disabled {
   cursor: not-allowed;
   opacity: 0.55;
 }
+/* Workspace header layout: flex container spacing, bottom border and margin below. */
 .workspace-header {
   display: flex;
   justify-content: space-between;
@@ -130,10 +180,12 @@ button:disabled {
   border-bottom: 2px solid #c7d5e5;
   margin-bottom: 1.25rem;
 }
+/* Paragraph inside workspace header: constrain width and make the text a muted color. */
 .workspace-header > p {
   max-width: 430px;
   color: #44576e;
 }
+/* Eyebrow label style: small uppercase-like text with blue color and tracking. */
 .eyebrow {
   margin: 0;
   color: #2f5597;
@@ -141,6 +193,7 @@ button:disabled {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
 }
+/* Workspace grid: responsive columns with minimum width, gap, and top alignment for children. */
 .workspace-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -148,23 +201,29 @@ button:disabled {
   align-items: start;
   margin-bottom: 1rem;
 }
+/* Course selection list: stacked buttons with small gaps. */
 .course-select-list {
   display: grid;
   gap: 0.55rem;
 }
+/* Buttons inside course select list: left-align text for readability. */
 .course-select-list button {
   text-align: left;
 }
+/* Visual indicator for the selected workflow via a left border accent. */
 .selected-workflow {
   border-left: 5px solid #2f5597;
 }
+/* Checkbox label layout: two-column grid with input and content aligned. */
 .check-label {
   grid-template-columns: auto 1fr;
   align-items: center;
 }
+/* Ensure checkbox input does not expand and keeps an appropriate width. */
 .check-label input {
   width: auto;
 }
+/* Success banner: pale green background, strong left accent, padding and dark green text. */
 .success {
   background: #e8f5ee;
   border-left: 4px solid #24835f;
@@ -172,21 +231,26 @@ button:disabled {
   color: #15533e;
   font-weight: 600;
 }
+/* Informational banner: pale blue background with blue left accent and padding. */
 .info {
   background: #edf4fc;
   border-left: 4px solid #2f5597;
   padding: 0.75rem;
 }
+/* Empty state container: constrain width for center-aligned empty messaging. */
 .empty-state {
   max-width: 680px;
 }
+/* Select element defaults to match input/button padding and font inheritance. */
 select {
   padding: 0.6rem;
   font: inherit;
 }
+/* Small text helper style: muted color for hints and meta text. */
 small {
   color: #52667d;
 }
+/* Responsive adjustments for narrow viewports: stack nav and header vertically and make tables scrollable. */
 @media (max-width: 760px) {
   .nav,
   .workspace-header {
@@ -202,16 +266,19 @@ small {
   }
 }
 
+/* App shell controls page height and layout: full viewport height and column flex layout. */
 .app-shell {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Main content area grows to fill remaining vertical space of the app shell. */
 .app-content {
   flex: 1;
 }
 
+/* Site footer: padding, top border, light background, muted text color, and centered text. */
 .site-footer {
   padding: 1rem;
   border-top: 1px solid #ccd5e1;

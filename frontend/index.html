@@ -1,12 +1,35 @@
+<!--
+Script name: index.html
+Original location: frontend/index.html
+What this script is: The HTML entry point for the frontend single-page application (SPA).
+What it is used for: Provides the document shell, a mount point for the SPA, and loads the client bootstrap module.
+Programming language: HTML
+Inputs: HTTP GET request from a browser; no server-side inputs embedded in this file.
+Outputs: Renders an HTML document to the browser and causes client JavaScript to execute and render the app into the DOM.
+Where output is saved or sent: browser (rendered DOM and in-memory execution of loaded module)
+Technologies and services used or interacted with: HTML5, ES module loader in browser, client-side TypeScript/React (via /src/main.tsx), served by a web server or dev server (e.g., Vite).
+Downstream scripts/files/processes that consume the output: /src/main.tsx (module loaded by the script tag), any client-side bundles or modules imported by that module.
+Risks and safe change note: Changing the 'id' on the mount div or the script 'src' path will break application bootstrap; changing meta tags affects rendering and responsiveness. Make minimal edits and test in browser/dev server; keep paths and element ids consistent with client code.
+created by: Sadeq Obaid
+-->
+<!-- Declares the document type as HTML5 so browsers render in standards mode. -->
 <!doctype html>
+<!-- Root html element with language set to English for accessibility and user agents. -->
 <html lang="en">
+  <!-- Document head: metadata, character set, viewport, and title are defined here. -->
   <head>
+    <!-- Sets the character encoding to UTF-8 to ensure correct rendering of text. -->
     <meta charset="UTF-8" />
+    <!-- Configures the viewport for responsive behavior on mobile devices. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title shown in the browser tab and used by search engines; identifies this page as the Course Training Portal. -->
     <title>Course Training Portal</title>
   </head>
+  <!-- Document body: visible content and script bootstrapping are placed here. -->
   <body>
+    <!-- Mount point for the frontend application; client-side code will query this element by id 'root' and render the SPA into it. -->
     <div id="root"></div>
+    <!-- Loads the client-side entry module as an ES module from /src/main.tsx to bootstrap the application. -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
